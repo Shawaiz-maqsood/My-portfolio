@@ -8,16 +8,21 @@
 </head>
 <body>
    <header>
-    <div class="logo">MY PORTFOLIO</div>
-    <nav class="navbar">
-        <ul>
-            <li class="nav-item"><a href="#about">About</a></li>
-            <li class="nav-item"><a href="#skills">Skills</a></li>
-            <li class="nav-item"><a href="#services">Services</a></li>
-            <li class="nav-item"><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-   </header>
+  <div class="logo">MY PORTFOLIO</div>
+  <nav class="navbar">
+    <ul>
+      <li class="nav-item"><a href="#about">About</a></li>
+      <li class="nav-item"><a href="#skills">Skills</a></li>
+      <li class="nav-item"><a href="#services">Services</a></li>
+      <li class="nav-item"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
 
    <section class="hero">
     <div class="text">
@@ -170,6 +175,13 @@
 </div>
 </section>
 
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navList = document.querySelector('.navbar ul');
+  hamburger.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
